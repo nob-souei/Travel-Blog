@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+/*共通部分
+----------------------*/
+html {
+  font-size: 100%;
+}
+body {
+  font-family: "Noto Sans JP", "Noto Sans", sans-serif;
+  color: #000;
+  font-size: 0.875rem;
+  padding-top: 110px;
+}
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+.read a {
+  padding-bottom: 1px;
+  color: #333;
+  position: relative;
+  text-align: center;
+}
+
+.read a::after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  background: #333;
+  transition: all 200ms ease;
+}
+
+.read a:hover::after {
+  opacity: 0;
+  transform: translateY(3px);
+}
+
+img {
+  max-width: 100%;
+}
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/*--------ヘッター---------*/
+#header {
+  width: 100%;
+  height: 110px;
+  position: fixed;
+  box-sizing: border-box;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.logo h1 {
+  margin: 20px 0;
+  height: 30px;
+}
+
+.global {
+  background-color: #000;
+  height: 40px;
+}
+
+.menu {
+  display: flex;
+  color: #fff;
+  list-style: none;
+  padding: 10px 0;
+}
+
+.menu li a {
+  color: #fff;
+}
+
+.menu li {
+  padding-right: 60px;
+}
+
+.menu li:first-child {
+  padding-left: 16px;
+}
+
+/*--------セクションピックアップ---------*/
+#section-pickup {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.pickup {
+  margin-right: 30px;
+}
+
+.pickup img {
+  object-fit: cover;
+}
+
+.pickup:last-child {
+  margin-right: 0px;
+}
+
+.pickup-cap {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.read {
+  margin-top: 15px;
+}
+
+/*--------メインコンテンツ---------*/
+.main-contents {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 70px;
+  margin-bottom: 140px;
+}
+
+#news {
+  width: 65%;
+  text-align: center;
+}
+
+.contents {
+  margin-bottom: 80px;
+}
+
+.contents h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.contents .time {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.contents .time span {
+  margin-left: 20px;
+}
+
+.contents img {
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.contents-cap {
+  padding: 0 5%;
+  font-size: 1rem;
+  text-align: justify;
+  margin-bottom: 30px;
+}
+
+/*--------サブコンテンツ---------*/
+#sub-contents {
+  width: 33%;
+  padding: 20px;
+  text-align: center;
+}
+
+.name {
+  margin-bottom: 60px;
+}
+
+.name img {
+  width: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 30px;
+}
+
+.sub-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.contents-text {
+  text-align: justify;
+}
+
+.ranking {
+  margin-bottom: 60px;
+}
+
+.ranking-contents {
+  margin-bottom: 30px;
+}
+
+.ranking-contents img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.archive-li {
+  list-style: none;
+  color: #000;
+}
+
+.archive-li li {
+  text-align: left;
+  padding: 15pt;
+  border-top: #000 solid 1px;
+  border-bottom: #000 solid 1px;
+  margin-bottom: -1px;
+}
+
+/*--------フッター---------*/
+#footer {
+  background-color: #f7f7f7;
+  padding: 0 16px;
+}
+
+.footer-contents {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.footer-item {
+  width: 30%;
+}
+
+.about-li {
+  list-style: none;
+  margin-top: 20px;
+  color: #000;
+}
+
+.about-li li {
+  margin-top: 5px;
+  padding-left: 16px;
+  position: relative;
+}
+
+.about-li li::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left: 8px solid #000;
+}
+
+.menu-li {
+  list-style: none;
+  color: #000;
+}
+
+.menu-li li {
+  padding: 15pt;
+  border-top: #000 solid 1px;
+  border-bottom: #000 solid 1px;
+  margin-bottom: -1px;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  margin: 10px 0;
+  text-align: center;
+}
+
+/*--------レスポンシブ---------*/
+@media (max-width: 600px) {
+  .menu {
+    overflow: scroll;
+  }
+
+  #section-pickup {
+    flex-direction: column;
+    width: 100%;
+  }
+  .pickup {
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+
+  .main-contents {
+    flex-direction: column;
+    width: 100%;
+  }
+  #news {
+    width: 100%;
+  }
+
+  #sub-contents {
+    width: 100%;
+  }
+
+  .footer-contents {
+    flex-direction: column;
+    width: 100%;
+  }
+  .footer-item {
+    width: 100%;
+    margin-top: 40px;
+    padding: 0 16px;
+  }
+  .footer-item:first-child {
+    margin-top: 0px;
+  }
+}
